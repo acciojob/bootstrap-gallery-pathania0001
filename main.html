@@ -1,16 +1,211 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+  <meta charset="UTF-8" />
+  <title>Cards Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap 4.3.1 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <style>
+    .card {
+      border-radius: 0.5rem;
+    }
+    .card-img-top {
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .carousel-inner img {
+      max-height: 600px;
+      object-fit: contain;
+    }
+  </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <div class="container py-4">
+    <h2 class="text-center mb-4">Cards Gallery</h2>
+    <div class="row">
+      <!-- 9 Image Cards -->
+      <!-- We'll use data-target and data-slide-to to link each image to a carousel index -->
+      <!-- You can replace the placeholder image URLs with your real ones -->
+
+      <!-- Repeating cards (0 to 8 index for carousel) -->
+      <!-- Card Template -->
+      <!-- Use col-md-4 to fit 3 cards per row on medium+ screens -->
+      <!-- BEGIN LOOP -->
+      <!-- Card 0 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image1" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="0" alt="Image 1">
+          <div class="card-body text-center">
+            <h6>Image 1</h6>
+            <p>Description of image 1</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for Cards 1 to 8 -->
+      <!-- Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image2" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="1" alt="Image 2">
+          <div class="card-body text-center">
+            <h6>Image 2</h6>
+            <p>Description of image 2</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image3" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="2" alt="Image 3">
+          <div class="card-body text-center">
+            <h6>Image 3</h6>
+            <p>Description of image 3</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image4" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="3" alt="Image 4">
+          <div class="card-body text-center">
+            <h6>Image 4</h6>
+            <p>Description of image 4</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image5" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="4" alt="Image 5">
+          <div class="card-body text-center">
+            <h6>Image 5</h6>
+            <p>Description of image 5</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image6" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="5" alt="Image 6">
+          <div class="card-body text-center">
+            <h6>Image 6</h6>
+            <p>Description of image 6</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image7" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="6" alt="Image 7">
+          <div class="card-body text-center">
+            <h6>Image 7</h6>
+            <p>Description of image 7</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image8" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="7" alt="Image 8">
+          <div class="card-body text-center">
+            <h6>Image 8</h6>
+            <p>Description of image 8</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200?text=Image9" class="card-img-top"
+               data-toggle="modal" data-target="#lightboxModal" data-slide-to="8" alt="Image 9">
+          <div class="card-body text-center">
+            <h6>Image 9</h6>
+            <p>Description of image 9</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Lightbox Modal with Carousel -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" role="dialog" aria-labelledby="carouselLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content bg-transparent border-0">
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <!-- Carousel items matching the 9 images -->
+            <!-- First slide must have class active -->
+            <div class="carousel-item active">
+              <img src="https://via.placeholder.com/800x600?text=Image1" class="d-block w-100" alt="Image1">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image2" class="d-block w-100" alt="Image2">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image3" class="d-block w-100" alt="Image3">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image4" class="d-block w-100" alt="Image4">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image5" class="d-block w-100" alt="Image5">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image6" class="d-block w-100" alt="Image6">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image7" class="d-block w-100" alt="Image7">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image8" class="d-block w-100" alt="Image8">
+            </div>
+            <div class="carousel-item">
+              <img src="https://via.placeholder.com/800x600?text=Image9" class="d-block w-100" alt="Image9">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    // When card image is clicked, show modal and move to specific image
+    $('.card-img-top').on('click', function () {
+      const index = $(this).data('slide-to');
+      $('#carouselIndicators').carousel(index);
+    });
+  </script>
 
 </body>
-
 </html>
